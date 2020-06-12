@@ -37,8 +37,8 @@ class TodoListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //Hide shadow while selecting row
         tableView.deselectRow(at: indexPath, animated: true)
-        //adding accessory tye
-        tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark ? 
+        //adding accessory type
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
     
     }
