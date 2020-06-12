@@ -29,7 +29,14 @@
                             <outlet property="delegate" destination="bff-Gu-ONs" id="DPo-I2-CqI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Today" id="cng-88-0AC"/>
+                    <navigationItem key="navigationItem" title="Today" id="cng-88-0AC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VWE-yA-fLH">
+                            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <action selector="addNewItems:" destination="bff-Gu-ONs" id="IDl-aO-2Rl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6T-GW-R3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

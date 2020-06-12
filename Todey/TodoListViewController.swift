@@ -10,7 +10,7 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
-    let staticArr = ["1","2","3"]
+    var staticArr = ["1","2","3"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,28 @@ class TodoListViewController: UITableViewController {
         
     
     }
+    
+    //MARK:- Adding New Items
+    
+    @IBAction func addNewItems(_ sender: Any) {
+        var textField = UITextField()
+        
+        //adding alert view so user can add new items
+        let alert = UIAlertController(title: "Adding New Items", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Add Items", style: .default) { (UIAlertAction) in
+            self.staticArr.append(textField.text!)
+            self.tableView.reloadData()
+        }
+        //creating textfield inside alert dialogue
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Add New Items"
+            textField = alertTextField
+        }
+        alert.addAction(action)
+        present(alert,animated: true,completion: nil)
+        
+    }
+    
     
 }
 
